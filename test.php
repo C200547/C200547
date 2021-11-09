@@ -8,8 +8,11 @@ try{
     //while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         //echo $row['id']."\t | ".$row['name']."\t | ".$row['age']."<br />";
     //}
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach($result as $row){
+        echo $row['id']."\t | ".$row['name']."\t | ".$row['age']."<br />";
+    }
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+     foreach($result as $row){
         echo $row['id']."\t | ".$row['name']."\t | ".$row['age']."<br />";
     }
 }catch (PDOException $e){
