@@ -6,7 +6,7 @@ try{
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
     while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        echo $row['id']."\t / ".$row['name']."\t / ".$row['email']."<br />";
+        echo $row['id']."\t | ".$row['name']."\t | ".$row['age']."<br />";
     }
 }catch (PDOException $e){
     echo($e->getMessage());
