@@ -5,10 +5,10 @@ try{
     $sql = "SELECT * FROM user;";
     $stmt = $dbh->prepare($sql);
     $stmt->execute();
-    //while($row = $stmt->fetchAll(PDO::FETCH_ASSOC)) {
+    //while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         //echo $row['id']."\t | ".$row['name']."\t | ".$row['age']."<br />";
     //}
-    $result = $stmt->fetch(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach($result as $row){
         echo $row['id']."\t | ".$row['name']."\t | ".$row['age']."<br />";
     }
